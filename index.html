@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Yann Fanha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #9cb5cf;
+            color: white;
+            padding: 20px 0;
+            min-height: 70px;
+            border-bottom: #77c7f7 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .profile-pic {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 15px;
+            border-bottom: #537eac 3px solid;
+        }
+        section {
+            padding: 20px;
+        }
+        .section-title {
+            color: #333;
+            text-transform: uppercase;
+            border-bottom: #77c7f7 2px solid;
+            margin-bottom: 10px;
+        }
+        .info, .contact, .skills, .languages, .references {
+            margin-bottom: 20px;
+        }
+        .info h2, .contact h2, .skills h2, .languages h2, .references h2 {
+            margin: 0 0 10px 0;
+        }
+        .contact p, .skills p, .languages p, .references p {
+            margin: 5px 0;
+        }
+        .table-container {
+            margin-bottom: 20px;
+        }
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container th, .table-container td {
+            /*border: 1px solid #ddd;*/
+            padding: 8px;
+            text-align: left;
+            width: 30%;
+        }
+
+        .table-container tr td:last-child {
+            width: 40%;
+            text-align: left;
+            white-space: pre;
+            tab-size: 15;
+        }
+
+        .table-container-informations {
+            margin-bottom: 20px;
+        }
+        .table-container-informations table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container-informations th, .table-container-informations td {
+            padding: 8px;
+            text-align: left;
+        }
+        .table-container-informations th, .table-container-informations td:last-child {
+            padding: 8px;
+            text-align: right;
+        }
+
+        .marge1 {
+            margin-left: 15px;
+        }
+        .marge2 {
+            margin-left: 30px;
+            color: #999999;
+        }
+
+        #contact-table td{
+            text-align: center;
+        }
+        #contact-table td img{
+            max-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="portrait.jpg" alt="Yann Fanha" class="profile-pic">
+        <h1>Yann Fanha</h1>
+    </header>
+    <div class="container">
+        <!--<section class="info">
+            
+        </section>
+        <section class="objective">
+            <h2 class="section-title">Objectif</h2>
+            <p>Approfondir mes connaissances et développer mes compétences.</p>
+        </section>-->
+        <section class="education">
+            <h2 class="section-title">Formations</h2>
+
+            <div class="table-container">
+                <table class="table-content">
+                    <tr>
+                        <td>2023 – 2025</td>
+                        <td>(en cours)</td>
+                        <td>Diplôme Technicien ES Informatique <br><span class="marge1">Ingénierie des systèmes</span><br><span class="marge2">Centre Professionnel du Nord Vaudois (CPNV), 1450 Sainte-Croix</span> </td>
+                    </tr>
+                    <tr>
+                        <td>2019 – 2023</td>
+                        <td>(12 mois)</td>
+                        <td>CFC Informaticien<br><span class="marge1">Informatique d’entreprise</span><br><span class="marge2">Centre Professionnel du Nord Vaudois (CPNV), 1450 Sainte-Croix</span></td>
+                    <tr>
+                        <td>2017 – …</td>
+                        <td></td>
+                        <td>Arbitre<br><span class="marge1">Football - 2e ligue régionale</span><br><span class="marge2">Association Suisse Football (ASF), Canton de Vaud</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="experience">
+            <h2 class="section-title">Expériences professionnelles</h2>
+            <div class="table-container">
+                <table class="table-content">
+                    <tr>
+                        <td>2023</td>
+                        <td>(2 mois)</td>
+                        <td>Informaticien <br><span class="marge1">Administrateur réseaux et systèmes</span><br><span class="marge2">Haute Ecole d'Ingénierie et de Gestion (HEIG-VD), 1400 Yverdon-les-Bains</span> </td>
+                    </tr>
+                    <tr>
+                        <td>2022 – 2023</td>
+                        <td>(12 mois)</td>
+                        <td>Stagiaire Informaticien<br><span class="marge1"> Support informatique</span><br><span class="marge2">Haute Ecole d'Ingénierie et de Gestion (HEIG-VD), 1400 Yverdon-les-Bains</span></td>
+                    </tr>
+                    <tr>
+                        <td>2017 – …</td>
+                        <td></td>
+                        <td>Arbitre<br><span class="marge1">Football - 2e ligue régionale</span><br><span class="marge2">Association Suisse Football (ASF), Canton de Vaud</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="skills">
+            <h2 class="section-title">Compétences informatiques</h2>
+
+            <div class="table-container">
+                <table class="table-content">
+                    <tr>
+                        <td>Administration de serveurs</td>
+                        <td>Windows Server, Linux Server, Virtualisation, Serveurs Web</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Réseau</td>
+                        <td>Switch & Routeur Cisco, Firewall</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Portugais</td>
+                        <td>PowerShell, Bash</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Scripting</td>
+                        <td>PowerShell, Bash</td>
+                        <td></td>
+                    </tr>
+                </table>
+        </section>
+        <section class="languages">
+            <h2 class="section-title">Langues</h2>
+            <div class="table-container">
+                <table class="table-content">
+                    <tr>
+                        <td>Français</td>
+                        <td>Langue maternelle</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Anglais</td>
+                        <td>B2 - Autoévalué</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Portugais</td>
+                        <td>A2 - Autoévalué</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Allemand</td>
+                        <td>A1 - Autoévalué</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="references">
+            <h2 class="section-title">Liens</h2>
+            <div class="table-container" id="contacts">
+                <table id="contact-table">
+                    <tr>
+                        <td><a href="https://www.linkedin.com/in/yann-fanha/" target="_blank"><img src="https://raw.githubusercontent.com/YFanha/social-icons/master/SVG/Color/LinkedIN.svg"></a></td>
+                        <td><a href="https://github.com/YFanha/" target="_blank"><img src="https://raw.githubusercontent.com/YFanha/social-icons/master/SVG/Color/Github.svg"></a></td>
+                        <td><a href="mailto:contact@fanha.ch" target="_blank"><img src="https://raw.githubusercontent.com/YFanha/social-icons/master/SVG/Color/Gmail.svg"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
