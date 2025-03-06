@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #9cb5cf;
+    color: white;
+    padding: 20px 0;
+    min-height: 70px;
+    border-bottom: #77c7f7 3px solid;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+.profile-pic {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px;
+    border-bottom: #537eac 3px solid;
+}
+section {
+    padding: 20px;
+}
+.section-title {
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: #77c7f7 2px solid;
+    margin-bottom: 10px;
+}
+.table-container {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container tr {
+    display: flex;
+    width: 100%;
+}
+.table-container td {
+    padding: 8px;
+    text-align: left;
+    flex: 1;
+}
+.xp_title {
+    font-weight: bold;
+}
+.xp_place {
+    color: #999;
+}
+#contact-table td {
+    text-align: center;
+}
+#contact-table td img {
+    max-height: 40px;
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 0px;
+    }
+    .profile-pic {
+        width: 150px;
+    }
+    .table-container table {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    .table-container thead {
+        display: none;
+    }
+    .table-container tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        /* border: 1px solid #ddd; */
+    }
+
+    .table-container tr:not(:first-child) {
+        border-top: #537eac 1px solid;
+    }
+    .table-container td {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        /* background-color: yellow; */
+    }
+
+    .table-container td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #333;
+    }
+}

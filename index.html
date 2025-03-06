@@ -4,105 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Yann Fanha</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #9cb5cf;
-            color: white;
-            padding: 20px 0;
-            min-height: 70px;
-            border-bottom: #77c7f7 3px solid;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .profile-pic {
-            width: 250px;
-            height: auto;
-            border-radius: 50%;
-            margin-top: 15px;
-            border-bottom: #537eac 3px solid;
-        }
-        section {
-            padding: 20px;
-        }
-        .section-title {
-            color: #333;
-            text-transform: uppercase;
-            border-bottom: #77c7f7 2px solid;
-            margin-bottom: 10px;
-        }
-        .info, .contact, .skills, .languages, .references {
-            margin-bottom: 20px;
-        }
-        .info h2, .contact h2, .skills h2, .languages h2, .references h2 {
-            margin: 0 0 10px 0;
-        }
-        .contact p, .skills p, .languages p, .references p {
-            margin: 5px 0;
-        }
-        .table-container {
-            margin-bottom: 20px;
-        }
-        .table-container table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table-container th, .table-container td {
-            /*border: 1px solid #ddd;*/
-            padding: 8px;
-            text-align: left;
-            width: 30%;
-        }
-
-        .table-container tr td:last-child {
-            width: 40%;
-            text-align: left;
-            white-space: pre;
-            tab-size: 15;
-        }
-
-        .table-container-informations {
-            margin-bottom: 20px;
-        }
-        .table-container-informations table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table-container-informations th, .table-container-informations td {
-            padding: 8px;
-            text-align: left;
-        }
-        .table-container-informations th, .table-container-informations td:last-child {
-            padding: 8px;
-            text-align: right;
-        }
-
-        .xp_title {
-            font-weight: bold;
-        }
-        .xp_place{
-            color: #999999;
-        }
-
-        #contact-table td{
-            text-align: center;
-        }
-        #contact-table td img{
-            max-height: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -110,116 +12,81 @@
         <h1>Yann Fanha</h1>
     </header>
     <div class="container">
-        <!--<section class="info">
-            
-        </section>
-        <section class="objective">
-            <h2 class="section-title">Objectif</h2>
-            <p>Approfondir mes connaissances et développer mes compétences.</p>
-        </section>-->
         <section class="education">
             <h2 class="section-title">Formations</h2>
-
             <div class="table-container">
-                <table class="table-content">
-                    <tr>
-                        <td>2023 – 2025</td>
-                        <td>(en cours)</td>
-                        <td><span class="xp_title">Diplôme Technicien ES Informatique</span><br><span class="xp_precision">Ingénierie des systèmes</span><br><span class="xp_place">Centre Professionnel du Nord Vaudois (CPNV), 1450 Sainte-Croix</span></td>
+                <table>
+                    <tr>    
+                        <td data-label="Année">2023 – 2025</td>
+                        <td data-label="Statut">(en cours)</td>
+                        <td data-label="Diplôme"><span class="xp_title">Diplôme Technicien ES Informatique</span><br><span class="xp_precision">Ingénierie des systèmes</span><br><span class="xp_place">CPNV, Sainte-Croix</span></td>
                     </tr>
                     <tr>
-                        <td>2019 – 2023</td>
-                        <td>(12 mois)</td>
-                        <td><span class="xp_title">CFC Informaticien</span><br><span class="xp_precision">Informatique d’entreprise</span><br><span class="xp_place">Centre Professionnel du Nord Vaudois (CPNV), 1450 Sainte-Croix</span></td>
-                    </tr>
-                    <tr>
-                        <td>2017 – …</td>
-                        <td></td>
-                        <td><span class="xp_title">Arbitre</span><br><span class="xp_precision">Football - 2e ligue régionale</span><br><span class="xp_place">Association Suisse Football (ASF), Canton de Vaud</span></td>
+                        <td data-label="Année">2019 – 2023</td>
+                        <td data-label="Durée">(12 mois)</td>
+                        <td data-label="Diplôme"><span class="xp_title">CFC Informaticien</span><br><span class="xp_precision">Informatique d’entreprise</span><br><span class="xp_place">CPNV, Sainte-Croix</span></td>
                     </tr>
                 </table>
             </div>
         </section>
+
         <section class="experience">
             <h2 class="section-title">Expériences professionnelles</h2>
             <div class="table-container">
-                <table class="table-content">
+                <table>
                     <tr>
-                        <td>2023</td>
-                        <td>(2 mois)</td>
-                        <td><span class="xp_title">Informaticien</span><br><span class="xp_precision"></span>Administrateur réseaux et systèmes<br><span class="xp_place">Haute Ecole d'Ingénierie et de Gestion (HEIG-VD), 1400 Yverdon-les-Bains</td>
+                        <td data-label="Année">2023</td>
+                        <td data-label="Durée">(2 mois)</td>
+                        <td data-label="Poste"><span class="xp_title">Informaticien</span><br><span class="xp_precision">Administrateur réseaux et systèmes</span><br><span class="xp_place">HEIG-VD, Yverdon-les-Bains</span></td>
                     </tr>
                     <tr>
-                        <td>2022 – 2023</td>
-                        <td>(12 mois)</td>
-                        <td><span class="xp_title">Stagiaire Informaticien</span><br><span class="xp_precision">Support informatique</span><br><span class="xp_place">Ecole d'Ingénierie et de Gestion (HEIG-VD), 1400 Yverdon-les-Bains</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2017 – …</td>
-                        <td></td>
-                        <td><span class="xp_title">Arbitre</span><br><span class="xp_precision">Football - 2e ligue régionale</span><br><span class="xp_place">Association Suisse Football (ASF), Canton de Vaud</span></td>
+                        <td data-label="Année">2022 – 2023</td>
+                        <td data-label="Durée">(12 mois)</td>
+                        <td data-label="Poste"><span class="xp_title">Stagiaire Informaticien</span><br><span class="xp_precision">Support informatique</span><br><span class="xp_place">HEIG-VD, Yverdon-les-Bains</span></td>
                     </tr>
                 </table>
             </div>
         </section>
+
         <section class="skills">
             <h2 class="section-title">Compétences informatiques</h2>
-
             <div class="table-container">
-                <table class="table-content">
+                <table>
                     <tr>
-                        <td>Administration de serveurs</td>
-                        <td>Windows Server, Linux Server, Virtualisation, Serveurs Web</td>
-                        <td></td>
+                        <td data-label="Domaine">Administration de serveurs</td>
+                        <td data-label="Compétences">Windows Server, Linux Server, Virtualisation, Serveurs Web</td>
                     </tr>
                     <tr>
-                        <td>Réseau</td>
-                        <td>Switch & Routeur Cisco, Firewall</td>
-                        <td></td>
+                        <td data-label="Domaine">Réseau</td>
+                        <td data-label="Compétences">Switch & Routeur Cisco, Firewall</td>
                     </tr>
                     <tr>
-                        <td>Scripting/Automation</td>
-                        <td>PowerShell, Bash, Ansible, Terraform</td>
-                        <td></td>
+                        <td data-label="Domaine">Scripting/Automation</td>
+                        <td data-label="Compétences">PowerShell, Bash, Ansible, Terraform</td>
                     </tr>
                 </table>
+            </div>
         </section>
+
         <section class="languages">
             <h2 class="section-title">Langues</h2>
             <div class="table-container">
-                <table class="table-content">
+                <table>
                     <tr>
-                        <td>Français</td>
-                        <td>Langue maternelle</td>
-                        <td></td>
+                        <td data-label="Langue">Français</td>
+                        <td data-label="Niveau">Langue maternelle</td>
                     </tr>
                     <tr>
-                        <td>Anglais</td>
-                        <td>B2 - Autoévalué</td>
-                        <td></td>
+                        <td data-label="Langue">Anglais</td>
+                        <td data-label="Niveau">B2 - Autoévalué</td>
                     </tr>
                     <tr>
-                        <td>Portugais</td>
-                        <td>A2 - Autoévalué</td>
-                        <td></td>
+                        <td data-label="Langue">Portugais</td>
+                        <td data-label="Niveau">A2 - Autoévalué</td>
                     </tr>
                     <tr>
-                        <td>Allemand</td>
-                        <td>A1 - Autoévalué</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <section class="references">
-            <h2 class="section-title">Liens</h2>
-            <div class="table-container" id="contacts">
-                <table id="contact-table">
-                    <tr>
-                        <td><a href="https://www.linkedin.com/in/yann-fanha/" target="_blank"><img src="https://raw.githubusercontent.com/YFanha/social-icons/master/SVG/Color/LinkedIN.svg"></a></td>
-                        <td><a href="https://github.com/YFanha/" target="_blank"><img src="https://raw.githubusercontent.com/YFanha/social-icons/master/SVG/Color/Github.svg"></a></td>
-                        <td><a href="mailto:contact@fanha.ch" target="_blank"><img src="https://raw.githubusercontent.com/YFanha/social-icons/master/SVG/Color/Gmail.svg"></a></td>
+                        <td data-label="Langue">Allemand</td>
+                        <td data-label="Niveau">A1 - Autoévalué</td>
                     </tr>
                 </table>
             </div>
