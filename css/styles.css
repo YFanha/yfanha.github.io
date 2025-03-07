@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
 }
 .container {
-    width: 80%;
+    width: 50%;
     margin: auto;
     overflow: hidden;
 }
@@ -66,6 +66,12 @@ section {
     max-height: 40px;
 }
 
+.objective {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
 /* Responsive Tables */
 @media (max-width: 768px) {
     .container {
@@ -110,5 +116,9 @@ section {
         font-weight: bold;
         display: block;
         color: #333;
+    }
+
+    .section-title {
+        text-align: center;
     }
 }
