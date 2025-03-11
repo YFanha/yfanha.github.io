@@ -15,6 +15,7 @@ jobs:
         with:
           fetch-depth: 0 # Ensure full history for merging
 
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -34,8 +35,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge develop into main
+      - name: Commit and push generated files
         run: |
-          git checkout main
-          git merge --ff-only develop || (echo "Merge conflict detected. Manual intervention required." && exit 1)
+          git add index.html css/ assets/
+          git commit -m "Auto-generated index.html and updated CSS" || echo "No changes to commit"
           git push origin main
+
+      # - name: Merge develop into main
+      #   run: |
+      #     git checkout main
+      #     git merge --ff-only develop || (echo "Merge conflict detected. Manual intervention required." && exit 1)
+      #     git push origin main
