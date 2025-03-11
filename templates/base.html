@@ -10,6 +10,20 @@
     <header>
         <img src="assets/portrait.jpg" alt="{{ fullname }}" class="profile-pic">
         <h1>{{ fullname }}</h1>
+        <div class="personal-info">
+            <ul id="left">
+                <li>{{ personal.address_street }}</li>
+                <li>{{ personal.address_city }}</li>
+                <li>{{ personal.phone }}</li>
+                <li>{{ personal.email }}</li>
+            </ul>
+            <ul id="right">
+                <li>{{ personal.age }}</li>
+                <li>{{ personal.status }}</li>
+                <li>{{ personal.nationality }}</li>
+                <li>{{ personal.driver_license }}</li>            
+            </ul>
+        </div>
     </header>
     <div class="container">
         <section class="info">
