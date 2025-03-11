@@ -15,7 +15,6 @@ jobs:
         with:
           fetch-depth: 0 # Ensure full history for merging
 
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
