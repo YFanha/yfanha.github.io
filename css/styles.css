@@ -17,9 +17,42 @@ header {
     border-bottom: #77c7f7 3px solid;
     text-align: center;
 }
+
+header ul{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
 header h1 {
     margin: 0;
 }
+
+.personal-info {
+    width: 40%;
+    /* background-color: green; */
+    margin: auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    display: flex; /* Use flexbox layout */
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#left {
+    /* background-color: red; */
+    width: 50%;
+    text-align: left;  /* Align to the right */
+    padding-right: 20px; /* Padding adjusted for right alignment */
+}
+
+#right {
+    /* background-color: yellow; */
+    width: 50%;
+    text-align: right;  /* Align to the left */
+    padding-left: 20px; /* Padding adjusted for left alignment */
+}
+
 .profile-pic {
     width: 250px;
     height: auto;
@@ -67,13 +100,49 @@ section {
 }
 
 .objective {
-    text-align: center;
+    text-align: justify;
     font-style: italic;
     font-weight: bold;
 }
-
 /* Responsive Tables */
 @media (max-width: 768px) {
+    .personal-info {
+        width: 100%;
+        /* background-color: green; */
+        margin: auto;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        display: flex; /* Use flexbox layout */
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #left {
+        /* background-color: red; */
+        width: 100%;
+        text-align: center;  /* Align to the right */
+        padding-right: 0; /* Padding adjusted for right alignment */
+        border-bottom: #537eac 3px solid;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #right {
+        /* background-color: yellow; */
+        width: 100%;
+        text-align: center;  /* Align to the left */
+        padding-left: 0; /* Padding adjusted for left alignment */
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: auto;
+        margin-top: 15px;
+        border-bottom: #000 3px solid;
+        border-radius: 5%;
+    }
     .container {
         width: 100%;
         padding: 0 0px;
