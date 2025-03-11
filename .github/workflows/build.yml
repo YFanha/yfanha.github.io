@@ -15,6 +15,21 @@ jobs:
         with:
           fetch-depth: 0 # Ensure full history for merging
 
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13.1'
+
+      - name: Install dependencies (if needed)
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run the script
+        run: python build.py
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
