@@ -5,8 +5,8 @@ formations:
   - years: 2023 - 2025
     time: (en cours)
     diplom: 
-      title: Diplôme Technicienssss ES Informatique
-      precision: Ingénierie des systèmesssss
+      title: Diplôme Techniciens ES Informatique
+      precision: Ingénierie des systèmes
       place: Centre Professionnel du Nord Vaudois, 1452 Sainte-Croix
   - years: 2019 - 2023
     time: 
@@ -16,7 +16,7 @@ formations:
       place: Centre Professionnel du Nord Vaudois, 1452 Sainte-Croix
 
 experience:
-  - years: 202422
+  - years: 2024
     time: (2 mois)
     job:
       title: Stagiaire Informaticien
