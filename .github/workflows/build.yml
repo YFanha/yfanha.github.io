@@ -30,6 +30,9 @@ jobs:
       - name: Run the script
         run: python build.py
 
+      - name: Checkout main branch
+        run: git checkout main
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
