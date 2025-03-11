@@ -38,7 +38,7 @@ jobs:
       - name: Commit and push generated files
         run: |
           git add index.html css/ assets/
-          git commit -m "Auto-generated index.html and updated CSS" || echo "No changes to commit"
+          git commit -m "Auto-generated index.html and updated CSS"
           git push origin main
 
       # - name: Merge develop into main
