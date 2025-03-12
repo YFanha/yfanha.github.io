@@ -184,8 +184,12 @@ section {
     background: #F8FAFC;
     padding: 15px;
     border-radius: 30px;
-    width: 30%;
+    width: 40%;
     color: black;
+}
+
+.portfolio-item p{
+    text-align: justify;
 }
 
 ul.project-technologies {
