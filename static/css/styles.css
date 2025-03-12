@@ -186,6 +186,13 @@ section {
     border-radius: 30px;
     width: 40%;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-item h3{
+    border-bottom: var(--profile-pic-border-color) 2px solid;
 }
 
 .portfolio-item p{
