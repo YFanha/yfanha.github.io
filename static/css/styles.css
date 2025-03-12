@@ -343,7 +343,7 @@ ul.project-technologies {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
-    position: relative;
+    position: absolute;
 }
 
 .page.hidden {
