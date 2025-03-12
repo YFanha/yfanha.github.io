@@ -99,3 +99,11 @@ projects:
       - Ansible
       - AWS
       - Git
+  - title: Monitoring with Prometheus & Grafana
+    description: Déploiement de Prometheus et Grafana pour le monitoring d'appareils et de services avec l'automatisation d'envoi alerte discord et de redémarrage de service avec Python
+    technologies:
+      - Linux
+      - Prometheus
+      - Grafana
+      - Nginx
+      - Git
