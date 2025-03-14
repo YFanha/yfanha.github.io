@@ -23,16 +23,16 @@
             <h1>{{ fullname }}</h1>
             <div class="personal-info">
                 <ul id="left">
-                    <li>{{ personal.address_street }}</li>
-                    <li>{{ personal.address_city }}</li>
-                    <li>{{ personal.phone }}</li>
-                    <li>{{ personal.email }}</li>
+                    <li>{{ general.personal.address_street }}</li>
+                    <li>{{ general.personal.address_city }}</li>
+                    <li>{{ general.personal.phone }}</li>
+                    <li>{{ general.personal.email }}</li>
                 </ul>
                 <ul id="right">
-                    <li>{{ personal.age }}</li>
-                    <li>{{ personal.status }}</li>
-                    <li>{{ personal.nationality }}</li>
-                    <li>{{ personal.driver_license }}</li>            
+                    <li>{{ general.personal.age }}</li>
+                    <li>{{ general.personal.status }}</li>
+                    <li>{{ general.personal.nationality }}</li>
+                    <li>{{ general.personal.driver_license }}</li>            
                 </ul>
             </div>
         </header>
@@ -62,7 +62,7 @@
                 <h2 class="section-title">Expériences professionnelles</h2>
                 <div class="table-container">
                     <table>
-                        {% for item in experience %}
+                        {% for item in experiences %}
                         <tr>
                             <td data-label="Année">{{ item.years }}</td>
                             <td data-label="Durée">{{ item.time if item.time }}</td>
@@ -124,15 +124,23 @@
                 <div class="portfolio-items">
 
                     {% for project in projects %}
-                    <a class="portfolio-item" href="{{ project.link }}">
-                        <h3>{{ project.title }}</h3>
-                        <p>{{ project.description }}</p>
-                        <ul class="project-technologies">
-                            {% for techno in project.technologies%}
-                            <li>{{ techno }}</li>
-                            {% endfor %}
-                        </ul>
-                    </a>
+                        {% if project.link %}
+                            <a class="portfolio-item" href="{{ project.link }}">
+                        {% else %}
+                            <div class="portfolio-item">
+                        {% endif %}
+                                <h3>{{ project.title }}</h3>
+                                <p>{{ project.description }}</p>
+                                <ul class="project-technologies">
+                                    {% for techno in project.technologies%}
+                                    <li>{{ techno }}</li>
+                                    {% endfor %}
+                                </ul>
+                        {% if project.link %}
+                            </a>
+                        {% else %}
+                            </div>
+                        {% endif %}
                     {% endfor %}
 
                 </div>

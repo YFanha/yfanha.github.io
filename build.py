@@ -3,14 +3,30 @@ import os
 import shutil
 from jinja2 import Environment, FileSystemLoader
 
-with open('data/data.yml', 'r', encoding="utf-8") as file:
-    data = yaml.safe_load(file)
+def remove_extension(filename):
+    name, _ = os.path.splitext(filename)
+    return name
+
+def getInformations(directory="data"):
+    data = {}
+    for file in os.listdir(directory):
+        if file.endswith(".yml") or file.endswith(".yaml"):
+            subject = remove_extension(file)
+
+            with open(os.path.join(directory, file), 'r', encoding="utf-8") as f:
+                content = yaml.safe_load(f)
+
+            if isinstance(content, dict):
+                data[subject] = content[subject]
+
+    return data
+
 
 env = Environment(loader=FileSystemLoader('templates'))
 
 template = env.get_template('base.html')
 
-output = template.render(data)
+output = template.render(getInformations())
 
 os.makedirs('website', exist_ok=True)
 

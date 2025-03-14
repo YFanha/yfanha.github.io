@@ -1,0 +1,32 @@
+---
+projects:
+  - title: Infrastructure deployment with terraform
+    description: Déploiement d'infrastructure sur AWS avec terraform et Ansible dans le but d'acceuillir des applications conteneurisées.
+    technologies:
+      - Terraform
+      - Ansible
+      - AWS
+      - Git
+    link: https://github.com/CPNV-ES-BI1-RIA2-ETL-INTERNAL-SOURCE/INFRA-DEPLOY-ELT
+
+  - title: Monitoring with Prometheus & Grafana
+    description: Déploiement de Prometheus et Grafana pour le monitoring d'appareils et de services avec l'automatisation d'envoi alerte discord et de redémarrage de service avec Python.
+    technologies:
+      - Linux
+      - Prometheus
+      - Grafana
+      - Nginx
+      - Git
+    link: https://github.com/YFanha/MON1-Prometheus/
+
+  - title: Travail Pratique Individuel (TPI)
+    description: Déploiement de Veeam Backup & Replication dans un environnement de test et implémentation de différents types de stratégies afin de protéger plusieurs types de données.
+    technologies:
+      - Veeam
+    link: 
+
+  - title: Déploiement d'un cluster vSphere (PréTPI)
+    description: Déploiement et configuration d'un cluster VMware vSphere avec vSAN. Ce cluster avait pour but d'acceuillir mon TPI
+    technologies:
+      - VMware
+    link:
