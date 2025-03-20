@@ -24,11 +24,17 @@ def getInformations(directory="data"):
 
 env = Environment(loader=FileSystemLoader('templates'))
 
-template = env.get_template('base.html')
+base_template = env.get_template('base.html')
+cv_section = env.get_template('cv.html')
+cv_portfolio = env.get_template('portfolio.html')
 
-output = template.render(getInformations())
+data = getInformations()
 
-os.makedirs('website', exist_ok=True)
+# Render sub-sections
+cv_content = cv_section.render(data)
+portfolio_content = cv_portfolio.render(data)
+
+output = base_template.render(data, cv_content=cv_content, portfolio_content=portfolio_content)
 
 output_file_path = os.path.join('website', 'index.html')
 
