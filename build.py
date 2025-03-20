@@ -38,6 +38,8 @@ output = base_template.render(data, cv_content=cv_content, portfolio_content=por
 
 output_file_path = os.path.join('website', 'index.html')
 
+os.makedirs('website', exist_ok=True)
+
 with open(output_file_path, 'w', encoding="utf-8") as file:
     file.write(output)
 
