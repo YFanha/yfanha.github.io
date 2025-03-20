@@ -1,8 +1,9 @@
 :root {
-    --header-color: #9cb5cf;
+    --header-color: white;
+    /* --header-color: #F0FFFF; */
     --profile-pic-border-color: #537eac;
-    --section-title-color: #333;
-    --navbar-color: #9cb5cf;
+    --section-title-color: #000661;
+    --navbar-color: #000661; /* Same as header 9cb5cf */
     --navbar-active-color: #77c7f7;
     --borders-color: #77c7f7;
     --secondary-text-color: #999;
@@ -80,7 +81,7 @@ body {
 
 header {
     background: var(--header-color);
-    color: white;
+    color: --var(--section-title-color);
     padding: 20px 0;
     min-height: 70px;
     border-bottom: var(--borders-color) 3px solid;
@@ -97,7 +98,7 @@ header h1 {
 }
 
 .personal-info {
-    width: 40%;
+    width: 20%;
     /* background-color: green; */
     margin: auto;
     font-size: 1.2em;
@@ -125,9 +126,9 @@ header h1 {
 .profile-pic {
     width: 250px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-top: 15px;
-    border-bottom: var(--profile-pic-border-color) 3px solid;
+    border-bottom: var(--profile-pic-border-color) 0px solid;
 }
 
 .container {
