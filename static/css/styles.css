@@ -263,13 +263,12 @@ ul.project-technologies {
         width: 100%;
         text-align: center;  /* Align to the right */
         padding-right: 0; /* Padding adjusted for right alignment */
-        border-bottom: var(--profile-pic-border-color) 3px solid;
+        /* border-bottom: var(--profile-pic-border-color) 3px solid; */
         padding-bottom: 10px;
         margin-bottom: 10px;
     }
     
     #right {
-        /* background-color: yellow; */
         width: 100%;
         text-align: center;  /* Align to the left */
         padding-left: 0; /* Padding adjusted for left alignment */
@@ -279,8 +278,8 @@ ul.project-technologies {
         width: 250px;
         height: auto;
         margin-top: 15px;
-        border-bottom: #000 3px solid;
-        border-radius: 5%;
+        border-bottom: #fff 3px solid;
+        border-radius: 10%;
     }
     .container {
         width: 100%;
@@ -353,31 +352,12 @@ ul.project-technologies {
 .page {
     position: absolute;
     width: 100%;
-    /* top: 10px; */
     left: 0;
-    transform: translateX(var(--direction));
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .page.active {
     opacity: 1;
-    transform: translateY(0);
     visibility: visible;
-    position: absolute;
 }
-
-.page.hidden {
-    visibility: hidden;
-    transform: translateX(var(--direction)); /* You can adjust this for the "out" animation, e.g. translateX(-100%) */
-    transition: opacity 0.8s ease-in, transform 0.8s ease-in, visibility 0s 0.8s;
-}
-
-/* .link.active{
-    background-color: var(--navbar-active-color);
-    border-bottom: var(--navbar-active-color) 2px solid;
-} */
-
-/* .navbar ul li a:hover{
-    border-bottom: var(--navbar-active-color) 0.5em solid;;
-    font-weight: bold;
-} */
