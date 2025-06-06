@@ -1,7 +1,7 @@
 ---
 projects:
   - title: Automatisation de déploiement de cluster Nutanix (TD)
-    description: Automatisation du déploiement d'un cluster Nutanix avec Ansible et Terraform. Ce projet a été réalisé dans le cadre de mon travail de diplôme.
+    description: Automatisation du déploiement d'un cluster Nutanix avec Ansible et Terraform (+ Nutanix Foundation). Ce projet a été réalisé dans le cadre de mon travail de diplôme.
     technologies:
       - Terraform
       - Ansible
