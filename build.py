@@ -12,48 +12,50 @@ def getInformations(directory="data"):
     for file in os.listdir(directory):
         if file.endswith(".yml") or file.endswith(".yaml"):
             subject = remove_extension(file)
-
             with open(os.path.join(directory, file), 'r', encoding="utf-8") as f:
                 content = yaml.safe_load(f)
-
-            if isinstance(content, dict):
+            if isinstance(content, dict) and subject in content:
                 data[subject] = content[subject]
-
     return data
 
-
-env = Environment(loader=FileSystemLoader('templates'))
-
-base_template = env.get_template('base.html')
-cv_section = env.get_template('cv.html')
-cv_portfolio = env.get_template('portfolio.html')
-
-data = getInformations()
-
-# Render sub-sections
-cv_content = cv_section.render(data)
-portfolio_content = cv_portfolio.render(data)
-
-output = base_template.render(data, cv_content=cv_content, portfolio_content=portfolio_content)
-
-output_file_path = os.path.join('website', 'index.html')
-
-os.makedirs('website', exist_ok=True)
-
-with open(output_file_path, 'w', encoding="utf-8") as file:
-    file.write(output)
-
 def copy_file_or_directory(src, dest):
-    """Copy files or directories to the destination."""
-    if os.path.isdir(src):  
+    if os.path.isdir(src):
         dest_dir = os.path.join(dest, os.path.basename(src))
-        shutil.copytree(src, dest_dir, dirs_exist_ok=True)  
-    elif os.path.isfile(src):  
-        shutil.copy2(src, dest)  
+        shutil.copytree(src, dest_dir, dirs_exist_ok=True)
+    elif os.path.isfile(src):
+        shutil.copy2(src, dest)
 
-files_to_copy = ['static', 'assets', 'CNAME']
+def generate_site(data_dir, output_dir):
+    env = Environment(loader=FileSystemLoader('templates'))
 
-for item in files_to_copy:
-    copy_file_or_directory(item, 'website')
+    base_template = env.get_template('base.html')
+    cv_section = env.get_template('cv.html')
+    cv_portfolio = env.get_template('portfolio.html')
 
-print("index.html has been generated successfully in the 'website' directory.")
+    data = getInformations(data_dir)
+
+    # Render sub-sections
+    cv_content = cv_section.render(data)
+    portfolio_content = cv_portfolio.render(data)
+
+    output = base_template.render(data, cv_content=cv_content, portfolio_content=portfolio_content)
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    output_file_path = os.path.join(output_dir, 'index.html')
+    with open(output_file_path, 'w', encoding="utf-8") as file:
+        file.write(output)
+
+    # Copy static assets
+    files_to_copy = ['static', 'assets', 'CNAME']
+    for item in files_to_copy:
+        copy_file_or_directory(item, output_dir)
+
+    print(f"Site generated successfully in '{output_dir}'.")
+
+
+# Generate French site (existing)
+generate_site('data', 'website')
+
+# Generate English site
+generate_site('data/en', 'website/en')
