@@ -79,26 +79,43 @@ body {
     transform: scaleX(1);
 }
 
+
 header {
     background: var(--header-color);
-    color: --var(--section-title-color);
-    padding: 20px 0;
+    color: var(--section-title-color); /* Fixed: was '--var(...)' which is invalid */
+    padding: 2rem;
     min-height: 70px;
-    border-bottom: var(--borders-color) 3px solid;
+    border-bottom: 1px solid var(--borders-color);
     text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    max-width: 1000px;
+    margin: 2rem auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-header ul{
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+header:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 header h1 {
     margin: 0;
 }
 
+
 .personal-info {
-    width: 20%;
+    width: 50%;
     /* background-color: green; */
     margin: auto;
     font-size: 1.2em;
@@ -131,11 +148,21 @@ header h1 {
     border-bottom: var(--profile-pic-border-color) 0px solid;
 }
 
-.container {
-    width: 50%;
-    margin: auto;
-    overflow: hidden;
+ .container > section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+/* Optional: subtle hover effect */
+.container > section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+} */
 
 section {
     padding: 20px;
