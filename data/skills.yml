@@ -11,5 +11,5 @@ skills:
   - domain: Autre outils
     list: "Git, Docker, GitLab CI, GitHub Actions"
 
-  - domain: Monitoring
+  - domain: Observability
     list: "Prometheus, Grafana"

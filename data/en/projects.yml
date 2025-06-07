@@ -18,7 +18,7 @@ projects:
       - Git
     link: https://github.com/YFanha/INFRA-DEPLOY-RIA
 
-  - title: Monitoring with Prometheus & Grafana
+  - title: Observability with Prometheus & Grafana
     description: Deployment of Prometheus and Grafana for monitoring devices and services, with automated Discord alerting and service restart using Python.
     technologies:
       - Linux
