@@ -25,8 +25,18 @@ def copy_file_or_directory(src, dest):
     elif os.path.isfile(src):
         shutil.copy2(src, dest)
 
-def generate_site(data_dir, output_dir):
-    env = Environment(loader=FileSystemLoader('templates'))
+def generate_site(data_dir="data", output_dir="website", addtional_lang=""):
+    
+    if addtional_lang:
+        data_dir = os.path.join(data_dir, addtional_lang)
+        output_dir = os.path.join(output_dir, addtional_lang)
+        templates_dir = os.path.join('templates', addtional_lang)
+        if not os.path.isdir(templates_dir):
+            templates_dir = 'templates'
+    else:
+        templates_dir = 'templates'
+
+    env = Environment(loader=FileSystemLoader(templates_dir))
 
     base_template = env.get_template('base.html')
     cv_section = env.get_template('cv.html')
@@ -54,8 +64,20 @@ def generate_site(data_dir, output_dir):
     print(f"Site generated successfully in '{output_dir}'.")
 
 
-# Generate French site (existing)
-generate_site('data', 'website')
 
-# Generate English site
-generate_site('data/en', 'website/en')
+# Automatically generate sites for each language subdirectory in data_dir
+
+def generate_all_sites(data_dir="data", output_dir="website"):
+    # Generate the default site (no additional language)
+    generate_site(data_dir=data_dir, output_dir=output_dir, addtional_lang="")
+
+    # List all subdirectories in data_dir (excluding files)
+    for entry in os.listdir(data_dir):
+        sub_path = os.path.join(data_dir, entry)
+        if os.path.isdir(sub_path):
+            generate_site(data_dir=data_dir, output_dir=output_dir, addtional_lang=entry)
+
+
+
+# Call the function to generate all sites
+generate_all_sites()

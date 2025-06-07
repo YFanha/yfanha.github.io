@@ -1,3 +1,5 @@
+---
+section_title: Skills
 skills:
   - domain: Infrastructure
     list: "Windows Server, Linux Server, Virtualization (VMware, Proxmox, Nutanix)"
