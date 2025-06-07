@@ -290,6 +290,13 @@ section {
     border-bottom: var(--profile-pic-border-color) 2px solid;
 }
 
+.portfolio-item h3 img {
+    height: 1.2em;
+    width: auto;
+    vertical-align: top;
+    margin-right: .5em;
+}
+
 .portfolio-item p{
     text-align: justify;
 }

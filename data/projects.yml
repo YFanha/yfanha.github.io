@@ -32,7 +32,7 @@ projects:
     description: Déploiement de Veeam Backup & Replication dans un environnement de test et implémentation de différents types de stratégies afin de protéger plusieurs types de données.
     technologies:
       - Veeam
-    link: 
+    link:
 
   - title: Déploiement d'un cluster vSphere (PréTPI)
     description: Déploiement et configuration d'un cluster VMware vSphere avec vSAN. Ce cluster avait pour but d'acceuillir mon TPI
