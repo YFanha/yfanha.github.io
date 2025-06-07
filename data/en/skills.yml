@@ -9,7 +9,7 @@ skills:
     list: "PowerShell, Bash, Python, Ansible, Terraform"
 
   - domain: Other Tools
-    list: "Git, Docker"
+    list: "Git, Docker, GitLab CI, GitHub Actions"
 
   - domain: Monitoring
     list: "Prometheus, Grafana"
