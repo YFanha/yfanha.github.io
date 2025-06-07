@@ -11,7 +11,9 @@
     --shadow-color: #00c853;
     --shadow-smooth: 0 4px 20px 0 rgba(119, 199, 247, 0.18);
     --color-background: #fff;
+    --color-text: #000;
 }
+
 
 [data-theme="dark"] {
     --header-color: #23272f;
@@ -223,6 +225,31 @@ section {
 #contact-table td img {
     max-height: 40px;
 }
+
+[data-theme="light"] .linkedin-img {
+    content: url(https://raw.githubusercontent.com/YFanha/social-icons/refs/heads/master/SVG/Black/LinkedIN_black.svg);
+}
+
+[data-theme="dark"] .linkedin-img {
+    content: url(https://raw.githubusercontent.com/YFanha/social-icons/refs/heads/master/SVG/White/LinkedIN_white.svg);
+}
+
+[data-theme="light"] .github-img {
+    content: url(https://raw.githubusercontent.com/YFanha/social-icons/refs/heads/master/SVG/Black/Github_black.svg);
+}
+
+[data-theme="dark"] .github-img {
+    content: url(https://raw.githubusercontent.com/YFanha/social-icons/refs/heads/master/SVG/White/Github_white.svg);
+}
+
+[data-theme="light"] .mail-img {
+    content: url(https://raw.githubusercontent.com/YFanha/social-icons/refs/heads/master/SVG/Black/Gmail_black.svg);
+}
+
+[data-theme="dark"] .mail-img {
+    content: url(https://raw.githubusercontent.com/YFanha/social-icons/refs/heads/master/SVG/White/Gmail_white.svg);
+}
+
 
 .objective {
     color: var(--section-title-color);
