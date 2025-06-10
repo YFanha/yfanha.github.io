@@ -56,11 +56,6 @@ def generate_site(data_dir="data", output_dir="website", addtional_lang=""):
     with open(output_file_path, 'w', encoding="utf-8") as file:
         file.write(output)
 
-    # Copy static assets
-    files_to_copy = ['static', 'assets', 'CNAME']
-    for item in files_to_copy:
-        copy_file_or_directory(item, output_dir)
-
     print(f"Site generated successfully in '{output_dir}'.")
 
 
@@ -70,6 +65,10 @@ def generate_site(data_dir="data", output_dir="website", addtional_lang=""):
 def generate_all_sites(data_dir="data", output_dir="website"):
     # Generate the default site (no additional language)
     generate_site(data_dir=data_dir, output_dir=output_dir, addtional_lang="")
+    # Copy static assets
+    files_to_copy = ['static', 'assets', 'CNAME']
+    for item in files_to_copy:
+        copy_file_or_directory(item, "website")
 
     # List all subdirectories in data_dir (excluding files)
     for entry in os.listdir(data_dir):
