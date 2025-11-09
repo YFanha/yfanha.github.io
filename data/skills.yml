@@ -1,6 +1,6 @@
 skills:
   - domain: Infrastructure
-    list: "Windows Server, Linux Server, Virtualisation (VMware, Proxmox)"
+    list: "Windows Server, Linux Server, Virtualisation (VMware, Proxmox, Nutanix)"
 
   - domain: Réseau
     list: "Switching, Routage, Firewall"

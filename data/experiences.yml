@@ -1,4 +1,11 @@
 experiences:
+  - years: 2025
+    time: (2 mois)
+    job:
+      title: Informaticien
+      precision: Administrateur systèmes
+      place: Haute Ecole d'Ingenierie et de Gestion du canton de Vaud, 1400 Yverdon-les-Bains
+      description: Conception et déploiement d'une solution de déploiement automatisé de cluster Nutanix. Réalisé dans le cadre de mon travail de diplôme.
   - years: 2024
     time: (2 mois)
     job:
