@@ -8,6 +8,19 @@ var app = (function(){
         root_vars = document.querySelector(':root');
         pages = document.querySelectorAll('[data-page]');
         links = document.querySelectorAll('[data-role="link"]');
+        const toggleSwitch = document.querySelector("[data-theme-toggle]");
+        console.log("Toggle switch checked:", toggleSwitch.checked);
+
+        toggleSwitch.addEventListener("change", function() {
+            // if checked, set dark mode
+            
+            if (toggleSwitch.checked) {
+                document.querySelector("html").setAttribute("data-theme", "dark");
+            }
+            else{
+                document.querySelector("html").setAttribute("data-theme", "light");
+            }
+        });
         
         [].forEach.call(links, function(link){
             link.addEventListener("click", navigate)
@@ -18,33 +31,25 @@ var app = (function(){
 
     });
 
-    function navigate(ev){
+    function navigate(ev) {
         ev.preventDefault();
-        let id = ev.currentTarget.href.split("#")[1];
 
-        let newIndex = [...pages].findIndex(page => page.id === id);
+        const id = ev.currentTarget.href.split("#")[1];
+        const newIndex = [...pages].findIndex(page => page.id === id);
 
-        let currentPage = pages[currentIndex];
-        let nextPage = pages[newIndex];
+        if (newIndex === currentIndex) return false; // Do nothing if the same page is clicked
 
-        // Change direction of transform animation
-        let direction = currentIndex > newIndex ? "100%" : "-100%";
-
-        root_vars.style.setProperty('--direction', direction);
-
-        currentPage.classList.remove('active');
-        currentPage.classList.add('hidden');
-
+        pages[currentIndex].classList.remove('active');
         links[currentIndex].classList.remove('active');
-        links[newIndex].classList.add('active');  // Move active class to the clicked link
 
-        currentPage.classList.remove('hidden');
-        nextPage.classList.add('active');
+        pages[newIndex].classList.add('active');
+        links[newIndex].classList.add('active');
 
         currentIndex = newIndex;
-        
+
         return false;
     }
+
 
     return {
         pages,
